@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Power-Up</title>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to My Trello Power-Up</h1>
+    <script>
+        window.TrelloPowerUp.initialize({
+            'board-buttons': function(t, opts) {
+                return [{
+                    text: 'My Power-Up Button',
+                    callback: function(t) {
+                        return t.popup({
+                            title: 'My Popup',
+                            url: 'https://remolalata.github.io/trello-power-up/popup.html',
+                            height: 200
+                        });
+                    }
+                }];
+            }
+        });
+    </script>
+</body>
+</html>
